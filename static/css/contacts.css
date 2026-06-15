@@ -1,0 +1,53 @@
+.contacts-page {
+    padding: 50px 0 80px;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.salon-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.salon-card h3 {
+    color: #2c7a6e;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.salon-card p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.salon-card i {
+    width: 25px;
+    color: #2c7a6e;
+}
+
+.map {
+    background: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 450px;
+}
+
+@media (max-width: 768px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+}

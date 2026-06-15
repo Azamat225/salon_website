@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Галерея до/после{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="gallery-page">
+    <div class="container">
+        <h1 class="page-title">Наши работы: до и после</h1>
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">Все работы</button>
+            <button class="filter-btn" data-filter="hair">Волосы</button>
+            <button class="filter-btn" data-filter="nails">Ногти</button>
+            <button class="filter-btn" data-filter="face">Лицо</button>
+        </div>
+        <div class="gallery-grid before-after">
+            <div class="gallery-item" data-category="hair">
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/before1.jpg') }}" alt="До">
+                    <span class="label">До</span>
+                </div>
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/after1.jpg') }}" alt="После">
+                    <span class="label">После</span>
+                </div>
+                <p>Окрашивание + стрижка</p>
+            </div>
+            <div class="gallery-item" data-category="hair">
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/before2.jpg') }}" alt="До">
+                    <span class="label">До</span>
+                </div>
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/after2.jpg') }}" alt="После">
+                    <span class="label">После</span>
+                </div>
+                <p>Восстановление волос, кератирование</p>
+            </div>
+            <div class="gallery-item" data-category="nails">
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/before_nails.jpg') }}" alt="До">
+                    <span class="label">До</span>
+                </div>
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/after_nails.jpg') }}" alt="После">
+                    <span class="label">После</span>
+                </div>
+                <p>Маникюр + гель-лак</p>
+            </div>
+            <div class="gallery-item" data-category="face">
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/before_face.jpg') }}" alt="До">
+                    <span class="label">До</span>
+                </div>
+                <div class="compare-img">
+                    <img src="{{ url_for('static', filename='images/after_face.jpg') }}" alt="После">
+                    <span class="label">После</span>
+                </div>
+                <p>Чистка лица + уход</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

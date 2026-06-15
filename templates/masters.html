@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Наши мастера{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/masters.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="masters-hero">
+    <div class="container">
+        <div class="masters-hero-content">
+            <span class="section-tag white">👑 Команда</span>
+            <h1>Наши <span class="green-text">мастера</span></h1>
+            <p>Профессионалы, которые любят свое дело</p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="masters-grid">
+        <div class="master-card">
+            <div class="master-photo-placeholder">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>Елена Потеряхина</h3>
+            <p class="master-spec">Парикмахер-универсал, колорист</p>
+            <div class="master-info">
+                <span><i class="fas fa-clock"></i> Стаж: 12 лет</span>
+                <span><i class="fas fa-star"></i> Топ-мастер</span>
+            </div>
+            <p class="master-bio">Специалист по сложному окрашиванию, лечению волос. Постоянно повышает квалификацию.</p>
+            <button class="master-book">Записаться</button>
+        </div>
+        <div class="master-card">
+            <div class="master-photo-placeholder">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>Вера Гаевая</h3>
+            <p class="master-spec">Мастер ногтевого сервиса</p>
+            <div class="master-info">
+                <span><i class="fas fa-clock"></i> Стаж: 8 лет</span>
+                <span><i class="fas fa-star"></i> Эксперт</span>
+            </div>
+            <p class="master-bio">Эксперт по дизайну ногтей, аппаратному маникюру, IBX-лечению.</p>
+            <button class="master-book">Записаться</button>
+        </div>
+        <div class="master-card">
+            <div class="master-photo-placeholder">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>Татьяна Гаврилова</h3>
+            <p class="master-spec">Парикмахер-универсал, барбер</p>
+            <div class="master-info">
+                <span><i class="fas fa-clock"></i> Стаж: 10 лет</span>
+                <span><i class="fas fa-star"></i> Топ-мастер</span>
+            </div>
+            <p class="master-bio">Мастер мужских и женских стрижек. Специалист по оформлению бороды и усов.</p>
+            <button class="master-book">Записаться</button>
+        </div>
+        <div class="master-card">
+            <div class="master-photo-placeholder">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>Лиля</h3>
+            <p class="master-spec">Косметолог-эстетист</p>
+            <div class="master-info">
+                <span><i class="fas fa-clock"></i> Стаж: 7 лет</span>
+                <span><i class="fas fa-star"></i> Эксперт</span>
+            </div>
+            <p class="master-bio">Аппаратная косметология, уходовые процедуры. Индивидуальный подход.</p>
+            <button class="master-book">Записаться</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

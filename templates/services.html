@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Услуги и цены{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="price-hero">
+    <div class="container">
+        <div class="price-hero-content">
+            <span class="section-tag white">💰 Прайс-лист</span>
+            <h1>Стоимость <span class="green-text">услуг</span></h1>
+            <p>ИП «Ковальская С.Ф.» | Салон красоты «У Платоши»</p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Женский зал -->
+    <div class="price-block">
+        <div class="price-block-header">
+            <i class="fas fa-female"></i>
+            <h2>Женский зал</h2>
+        </div>
+        <div class="table-wrapper">
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Наименование работ</th>
+                        <th>Цена с диагн.</th>
+                        <th>Цена без диагн.</th>
+                        <th>NEW Мастер</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Диагностика волос</td><td>500</td><td>500</td><td>—</td></tr>
+                    <tr><td>Стрижка женская</td><td>300</td><td>330</td><td>200</td></tr>
+                    <tr><td>Стрижка креативная</td><td>360</td><td>400</td><td>250</td></tr>
+                    <tr><td>Стрижка «Каре», «Каскад»</td><td>330</td><td>370</td><td>250</td></tr>
+                    <tr><td>Стрижка челки</td><td>120</td><td>130</td><td>70</td></tr>
+                    <tr><td>Мытье головы</td><td>50</td><td>60</td><td>30-50</td></tr>
+                    <tr><td>Стрижка пенсионная</td><td>240</td><td>270</td><td>150</td></tr>
+                    <tr><td>Укладка (короткая/средняя/удл.)</td><td>270-450</td><td>220-500</td><td>—</td></tr>
+                    <tr><td>Химическая завивка (Schwarzkopf)</td><td>700-900</td><td>770-990</td><td>—</td></tr>
+                    <tr><td>Биозавивка (Niagara)</td><td>800-1000</td><td>850-1200</td><td>—</td></tr>
+                    <tr><td>Мелирование</td><td>800-2500</td><td>850-3000</td><td>—</td></tr>
+                    <tr><td>Окрашивание (Estel, Kapous)</td><td>800-1700</td><td>880-2200</td><td>—</td></tr>
+                    <tr><td>Окрашивание «Омбре»</td><td colspan="2">2000-4000</td><td>2200-4400</td></tr>
+                    <tr><td>Кератиновое выпрямление</td><td>1650-2500</td><td>1700-2750</td><td>—</td></tr>
+                    <tr><td>Оформление бровей</td><td>220</td><td>220</td><td>—</td></tr>
+                    <tr><td>Покраска бровей хной</td><td colspan="2">400</td><td>—</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Мужской зал -->
+    <div class="price-block">
+        <div class="price-block-header">
+            <i class="fas fa-male"></i>
+            <h2>Мужской зал</h2>
+        </div>
+        <div class="table-wrapper">
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Наименование работ</th>
+                        <th>Цена с диагн.</th>
+                        <th>Цена без диагн.</th>
+                        <th>NEW Мастер</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Диагностика волос</td><td>300</td><td>330</td><td>300</td></tr>
+                    <tr><td>Стрижка модельная</td><td>230</td><td>260</td><td>200</td></tr>
+                    <tr><td>Стрижка «Бокс», «Полубокс»</td><td>200</td><td>220</td><td>180</td></tr>
+                    <tr><td>Стрижка пенсионная</td><td>200</td><td>220</td><td>150</td></tr>
+                    <tr><td>Стрижка креативная</td><td>280</td><td>310</td><td>250</td></tr>
+                    <tr><td>Стрижка «Наголо»</td><td>100</td><td>120</td><td>100</td></tr>
+                    <tr><td>Стрижка детская</td><td>200</td><td>220</td><td>150</td></tr>
+                    <tr><td>Оформление бороды</td><td colspan="2">100-200</td><td>—</td></tr>
+                    <tr><td>Hair Tattoo</td><td>100-200</td><td>110-220</td><td>—</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="price-note">
+        <i class="fas fa-info-circle"></i>
+        <p>Цены ориентировочные. Точную стоимость уточняйте у администратора. Действуют накопительные скидки.</p>
+    </div>
+</div>
+{% endblock %}

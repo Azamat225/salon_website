@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Примеры стилей{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="gallery-page">
+    <div class="container">
+        <h1 class="page-title">Примеры стилей</h1>
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="hair">Прически</button>
+            <button class="filter-btn" data-filter="nails">Маникюр</button>
+            <button class="filter-btn" data-filter="makeup">Макияж</button>
+        </div>
+        <div class="gallery-grid styles">
+            <div class="gallery-item" data-category="hair">
+                <img src="{{ url_for('static', filename='images/style_hair1.jpg') }}" alt="Прическа">
+                <div class="overlay">Свадебная прическа</div>
+            </div>
+            <div class="gallery-item" data-category="hair">
+                <img src="{{ url_for('static', filename='images/style_hair2.jpg') }}" alt="Прическа">
+                <div class="overlay">Бабетта</div>
+            </div>
+            <div class="gallery-item" data-category="nails">
+                <img src="{{ url_for('static', filename='images/style_nails1.jpg') }}" alt="Маникюр">
+                <div class="overlay">Френч с дизайном</div>
+            </div>
+            <div class="gallery-item" data-category="nails">
+                <img src="{{ url_for('static', filename='images/style_nails2.jpg') }}" alt="Маникюр">
+                <div class="overlay">Матовый маникюр</div>
+            </div>
+            <div class="gallery-item" data-category="makeup">
+                <img src="{{ url_for('static', filename='images/style_makeup1.jpg') }}" alt="Макияж">
+                <div class="overlay">Смоки айс</div>
+            </div>
+            <div class="gallery-item" data-category="makeup">
+                <img src="{{ url_for('static', filename='images/style_makeup2.jpg') }}" alt="Макияж">
+                <div class="overlay">Дневной макияж</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

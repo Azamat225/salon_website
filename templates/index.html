@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<!-- Hero Slider -->
+<section class="hero">
+    <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-bg green-1"></div>
+                <div class="slide-content">
+                    <span class="slide-badge">✨ Акция</span>
+                    <h2 class="slide-title">-20% на первое<br>посещение</h2>
+                    <p class="slide-text">Для новых клиентов при онлайн-записи</p>
+                    <a href="#" class="btn-primary">Записаться</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-bg green-2"></div>
+                <div class="slide-content">
+                    <span class="slide-badge">💎 Комбо</span>
+                    <h2 class="slide-title">Маникюр + Педикюр<br><span class="price-tag">2 500 ₽</span></h2>
+                    <p class="slide-text">Комплексный уход за руками и ногами</p>
+                    <a href="#" class="btn-primary">Выбрать время</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-bg green-3"></div>
+                <div class="slide-content">
+                    <span class="slide-badge">🎁 Подарок</span>
+                    <h2 class="slide-title">Подарочные<br>сертификаты</h2>
+                    <p class="slide-text">Лучший подарок для близких</p>
+                    <a href="#" class="btn-primary">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<!-- Popular Services -->
+<section class="popular">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Популярное</span>
+            <h2 class="section-title">Самые востребованные<br><span class="green-text">услуги</span></h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-hand-sparkles"></i>
+                </div>
+                <h3>Маникюр</h3>
+                <p>Классический, аппаратный, с покрытием гель-лак. Уход за кутикулой и массаж.</p>
+                <div class="card-price">от 800 ₽</div>
+                <a href="#" class="card-link">Записаться <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3>Стрижка</h3>
+                <p>Женские, мужские, детские стрижки. Работаем с волосами любой сложности.</p>
+                <div class="card-price">от 600 ₽</div>
+                <a href="#" class="card-link">Записаться <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">
+                    <i class="fas fa-brush"></i>
+                </div>
+                <h3>Макияж</h3>
+                <p>Дневной, вечерний, свадебный макияж. Профессиональная косметика.</p>
+                <div class="card-price">от 1 500 ₽</div>
+                <a href="#" class="card-link">Записаться <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about">
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="about-content">
+                <span class="section-tag">О салоне</span>
+                <h2>Пространство <span class="green-text">красоты и гармонии</span></h2>
+                <p>"У Платоши" — это сеть премиум-салонов красоты в Стерлитамаке. Наши мастера — профессионалы с опытом от 5 лет, использующие только лучшие бренды косметики.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">лет опыта</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">клиентов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">мастеров</div>
+                    </div>
+                </div>
+                <a href="{{ url_for('services') }}" class="btn-secondary">Все услуги <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-features">
+                <div class="feature">
+                    <i class="fas fa-gem"></i>
+                    <div>
+                        <h4>Премиум-бренды</h4>
+                        <p>L'Oreal, Estel, Schwarzkopf, OLLIN</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-microscope"></i>
+                    <div>
+                        <h4>Современное оборудование</h4>
+                        <p>Диагностика кожи головы, аппаратная косметология</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <h4>Индивидуальный подход</h4>
+                        <p>Для каждого клиента своя программа ухода</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-card">
+            <h3>Готовы к преображению?</h3>
+            <p>Запишитесь онлайн и получите скидку 10% на первую услугу</p>
+            <button class="btn-cta" id="bookingBtn2">Записаться сейчас</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

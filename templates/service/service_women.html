@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Женский зал{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="service-detail-hero women-bg">
+    <div class="container">
+        <div class="service-detail-content">
+            <a href="{{ url_for('services') }}" class="back-link">← Назад к услугам</a>
+            <span class="service-badge">👩 Женский зал</span>
+            <h1>Женские стрижки и укладки</h1>
+            <p class="lead">Опытные стилисты-парикмахеры создадут для вас именно ту стрижку и укладку, которая выгодно подчеркнет достоинства вашей внешности.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BODY -->
+<section class="service-detail-body">
+    <div class="container">
+        <div class="service-detail-grid">
+            <!-- Левая колонка - основной текст -->
+            <div class="service-main">
+
+                <!-- Блок 1: Вступление -->
+                <div class="service-text-block">
+                    <h2>Профессиональный подход к каждой клиентке</h2>
+                    <p>При работе наши мастера примут во внимание все ваши пожелания, а также индивидуальные особенности ваших волос и внешности. Мы создадим образ, который будет радовать вас каждый день.</p>
+                </div>
+
+                <!-- ФОТО 1 -->
+                <div class="service-image-block">
+                    <img src="{{ url_for('static', filename='images/services/women/women-stylist.jpg') }}"
+                         alt="Мастер салона У Платоши за работой">
+                    <p class="image-caption">Наши мастера создают идеальный образ с учетом всех пожеланий</p>
+                </div>
+                <div class="service-image-block">
+                    <img src="{{ url_for('static', filename='images/services/women/women-stylist2.jpg') }}"
+                         alt="Мастер салона У Платоши за работой">
+                    <p class="image-caption">Наши мастера создают идеальный образ с учетом всех пожеланий</p>
+                </div>
+
+                <!-- Блок 2: Укладки -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-curl"></i> Укладки и прически</h2>
+                    <p>Вам предстоит важное мероприятие, и вы должны быть на нем безупречны? Подчеркните свою красоту и дополните свой эффектный образ элегантной укладкой волос! Качественная укладка от наших специалистов в течение долгого времени сохранит свою красоту и безупречность.</p>
+                    <p>Мы создадим для вас любую по сложности и стилю укладку волос — от повседневной до свадебной.</p>
+                </div>
+
+                <!-- Блок 3: Окрашивание -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-palette"></i> Окрашивание волос</h2>
+                    <p>Хотите кардинально изменить свой образ и визуально освежить цвет своего лица? Наши квалифицированные специалисты профессионально подберут наиболее подходящий для вас цвет краски с учетом индивидуальных особенностей вашей внешности.</p>
+                    <p>В нашем салоне при проведении процедуры окрашивания мы используем только качественную безопасную современную косметику с активными восстановительными комплексами.</p>
+                </div>
+
+                <!-- ФОТО 2 -->
+                <div class="service-image-block">
+                    <img src="{{ url_for('static', filename='images/services/women/women-coloring.jpg') }}"
+                         alt="Окрашивание волос в салоне У Платоши">
+                    <p class="image-caption">Профессиональное окрашивание с использованием лучших брендов</p>
+                </div>
+
+                <!-- Блок 4: Брови -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-browsers"></i> Оформление бровей</h2>
+                    <p>Красивые, ухоженные брови — это рамка для ваших глаз. Наши мастера помогут создать идеальную форму бровей с учетом особенностей вашего лица.</p>
+                </div>
+
+                <!-- Блок 5: Детские стрижки -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-child"></i> Детские стрижки</h2>
+                    <p>Мы знаем, как важно, чтобы ваш ребенок чувствовал себя комфортно. Наши мастера найдут подход к каждому маленькому клиенту, создадут аккуратную и красивую стрижку.</p>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                    <a href="#" class="btn-primary">Записаться на стрижку</a>
+                </div>
+            </div>
+
+            <!-- Правая колонка - сайдбар -->
+            <div class="service-sidebar">
+                <div class="sidebar-card">
+                    <h3>Услуги женского зала</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Стрижки и укладки</li>
+                        <li><i class="fas fa-check-circle"></i> Окрашивание и колорирование</li>
+                        <li><i class="fas fa-check-circle"></i> Мелирование</li>
+                        <li><i class="fas fa-check-circle"></i> Биохимическая завивка</li>
+                        <li><i class="fas fa-check-circle"></i> Вечерние и свадебные прически</li>
+                        <li><i class="fas fa-check-circle"></i> Оформление бровей</li>
+                        <li><i class="fas fa-check-circle"></i> Детские стрижки</li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><i class="fas fa-phone"></i> +7 (987) 03-05-861</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Коммунистическая 84</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

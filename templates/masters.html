@@ -16,59 +16,194 @@
 </section>
 
 <div class="container">
-    <div class="masters-grid">
-        <div class="master-card">
-            <div class="master-photo-placeholder">
-                <i class="fas fa-user-circle"></i>
+
+    <!-- ============================================ -->
+    <!-- Салон №1 - ул. Худайбердина 122               -->
+    <!-- ============================================ -->
+    <div class="salon-section">
+        <div class="salon-header">
+            <div class="salon-icon">
+                <i class="fas fa-store"></i>
             </div>
-            <h3>Елена Потеряхина</h3>
-            <p class="master-spec">Парикмахер-универсал, колорист</p>
-            <div class="master-info">
-                <span><i class="fas fa-clock"></i> Стаж: 12 лет</span>
-                <span><i class="fas fa-star"></i> Топ-мастер</span>
+            <div class="salon-info">
+                <h2>Парикмахерская «У Платоши»</h2>
+                <p class="salon-address"><i class="fas fa-map-marker-alt"></i> ул. Худайбердина 122</p>
+                <p class="salon-phone"><i class="fas fa-phone"></i> +7 (987) 03-05-972</p>
             </div>
-            <p class="master-bio">Специалист по сложному окрашиванию, лечению волос. Постоянно повышает квалификацию.</p>
-            <button class="master-book">Записаться</button>
         </div>
-        <div class="master-card">
-            <div class="master-photo-placeholder">
-                <i class="fas fa-user-circle"></i>
+
+        <!-- Мастера ногтевого сервиса -->
+        <div class="department-section">
+            <h3 class="department-title"><i class="fas fa-hand-sparkles"></i> Мастера ногтевого сервиса</h3>
+            <div class="masters-grid">
+                <!-- Мастер 1: Гаевая Вера -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="{{ url_for('static', filename='images/masters/gaevaia-vera.jpg') }}"
+                             alt="Гаевая Вера - мастер ногтевого сервиса">
+                    </div>
+                    <h3>Гаевая Вера</h3>
+                    <p class="master-spec">Мастер ногтевого сервиса</p>
+                    <div class="master-info">
+                        <span><i class="fas fa-clock"></i> Стаж: 8 лет</span>
+                        <span><i class="fas fa-star"></i> Эксперт</span>
+                    </div>
+                    <p class="master-bio">Эксперт по дизайну ногтей, аппаратному маникюру, IBX-лечению.</p>
+                    <button class="master-book">Записаться</button>
+                </div>
+
+                <!-- Мастер 2: Полуэктова Ольга -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="{{ url_for('static', filename='images/masters/poluektova-olga.jpg') }}"
+                             alt="Полуэктова Ольга - мастер ногтевого сервиса">
+                    </div>
+                    <h3>Полуэктова Ольга</h3>
+                    <p class="master-spec">Мастер ногтевого сервиса</p>
+                    <div class="master-info">
+                        <span><i class="fas fa-clock"></i> Стаж: 10 лет</span>
+                        <span><i class="fas fa-star"></i> Топ-мастер</span>
+                    </div>
+                    <p class="master-bio">Специалист по комбинированному маникюру, покрытию гель-лак, дизайну.</p>
+                    <button class="master-book">Записаться</button>
+                </div>
             </div>
-            <h3>Вера Гаевая</h3>
-            <p class="master-spec">Мастер ногтевого сервиса</p>
-            <div class="master-info">
-                <span><i class="fas fa-clock"></i> Стаж: 8 лет</span>
-                <span><i class="fas fa-star"></i> Эксперт</span>
-            </div>
-            <p class="master-bio">Эксперт по дизайну ногтей, аппаратному маникюру, IBX-лечению.</p>
-            <button class="master-book">Записаться</button>
-        </div>
-        <div class="master-card">
-            <div class="master-photo-placeholder">
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <h3>Татьяна Гаврилова</h3>
-            <p class="master-spec">Парикмахер-универсал, барбер</p>
-            <div class="master-info">
-                <span><i class="fas fa-clock"></i> Стаж: 10 лет</span>
-                <span><i class="fas fa-star"></i> Топ-мастер</span>
-            </div>
-            <p class="master-bio">Мастер мужских и женских стрижек. Специалист по оформлению бороды и усов.</p>
-            <button class="master-book">Записаться</button>
-        </div>
-        <div class="master-card">
-            <div class="master-photo-placeholder">
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <h3>Лиля</h3>
-            <p class="master-spec">Косметолог-эстетист</p>
-            <div class="master-info">
-                <span><i class="fas fa-clock"></i> Стаж: 7 лет</span>
-                <span><i class="fas fa-star"></i> Эксперт</span>
-            </div>
-            <p class="master-bio">Аппаратная косметология, уходовые процедуры. Индивидуальный подход.</p>
-            <button class="master-book">Записаться</button>
         </div>
     </div>
+
+    <!-- Разделитель -->
+    <div class="salon-divider"></div>
+
+    <!-- ============================================ -->
+    <!-- Салон №2 - пр. Ленина д.65                    -->
+    <!-- ============================================ -->
+    <div class="salon-section">
+        <div class="salon-header">
+            <div class="salon-icon">
+                <i class="fas fa-store"></i>
+            </div>
+            <div class="salon-info">
+                <h2>Парикмахерская «У Платоши»</h2>
+                <p class="salon-address"><i class="fas fa-map-marker-alt"></i> пр. Ленина 65</p>
+                <p class="salon-phone"><i class="fas fa-phone"></i> +7 (987) 03-05-813</p>
+            </div>
+        </div>
+
+        <div class="department-section">
+            <div class="masters-grid">
+                <!-- Мастер 3: Янченко Екатерина -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="{{ url_for('static', filename='images/masters/yanchenko-ekaterina.jpg') }}"
+                             alt="Янченко Екатерина - парикмахер">
+                    </div>
+                    <h3>Янченко Екатерина</h3>
+                    <p class="master-spec">Парикмахер</p>
+                    <div class="master-info">
+                        <span><i class="fas fa-clock"></i> Стаж: 7 лет</span>
+                        <span><i class="fas fa-star"></i> Эксперт</span>
+                    </div>
+                    <p class="master-bio">Специалист по женским и мужским стрижкам, окрашиванию, укладкам.</p>
+                    <button class="master-book">Записаться</button>
+                </div>
+
+                <!-- Мастер 4: Смирнова Ольга -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="{{ url_for('static', filename='images/masters/smirnova-olga.jpg') }}"
+                             alt="Смирнова Ольга - парикмахер универсал">
+                    </div>
+                    <h3>Смирнова Ольга</h3>
+                    <p class="master-spec">Парикмахер универсал</p>
+                    <div class="master-info">
+                        <span><i class="fas fa-clock"></i> Стаж: 12 лет</span>
+                        <span><i class="fas fa-star"></i> Топ-мастер</span>
+                    </div>
+                    <p class="master-bio">Универсальный мастер по всем видам парикмахерских услуг.</p>
+                    <button class="master-book">Записаться</button>
+                </div>
+
+                <!-- Мастер 5: Гаврилова Татьяна -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="{{ url_for('static', filename='images/masters/gavrilova-tatiana.jpg') }}"
+                             alt="Гаврилова Татьяна - парикмахер универсал">
+                    </div>
+                    <h3>Гаврилова Татьяна</h3>
+                    <p class="master-spec">Парикмахер универсал, мастер по оформлению бороды и усов</p>
+                    <div class="master-info">
+                        <span><i class="fas fa-clock"></i> Стаж: 10 лет</span>
+                        <span><i class="fas fa-star"></i> Топ-мастер</span>
+                    </div>
+                    <p class="master-bio">Мастер мужских и женских стрижек. Специалист по оформлению бороды и усов.</p>
+                    <button class="master-book">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Разделитель -->
+    <div class="salon-divider"></div>
+
+    <!-- ============================================ -->
+    <!-- Салон №3 - ул. Худайбердина 101               -->
+    <!-- ============================================ -->
+    <div class="salon-section">
+        <div class="salon-header">
+            <div class="salon-icon">
+                <i class="fas fa-store"></i>
+            </div>
+            <div class="salon-info">
+                <h2>Парикмахерская «У Платоши»</h2>
+                <p class="salon-address"><i class="fas fa-map-marker-alt"></i> ул. Худайбердина 101</p>
+                <p class="salon-phone"><i class="fas fa-phone"></i> +7 (987) 03-05-972</p>
+            </div>
+        </div>
+
+        <!-- Женский зал -->
+        <div class="department-section">
+            <h3 class="department-title"><i class="fas fa-female"></i> Женский зал</h3>
+            <div class="masters-grid">
+                <!-- Мастер 6: Потеряхина Елена -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="{{ url_for('static', filename='images/masters/poteryahina-elena.jpg') }}"
+                             alt="Потеряхина Елена - женский мастер">
+                    </div>
+                    <h3>Потеряхина Елена</h3>
+                    <p class="master-spec">Женский мастер</p>
+                    <div class="master-info">
+                        <span><i class="fas fa-clock"></i> Стаж: 12 лет</span>
+                        <span><i class="fas fa-star"></i> Топ-мастер</span>
+                    </div>
+                    <p class="master-bio">Специалист по сложному окрашиванию, лечению волос.</p>
+                    <button class="master-book">Записаться</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Мужской зал -->
+        <div class="department-section">
+            <h3 class="department-title"><i class="fas fa-male"></i> Мужской зал</h3>
+            <div class="masters-grid">
+                <!-- Мастер 7: Нагимова Римма -->
+                <div class="master-card">
+                    <div class="master-photo">
+                        <img src="{{ url_for('static', filename='images/masters/nagimova-rimma.jpg') }}"
+                             alt="Нагимова Римма - мужской мастер">
+                    </div>
+                    <h3>Нагимова Римма</h3>
+                    <p class="master-spec">Мужской мастер</p>
+                    <div class="master-info">
+                        <span><i class="fas fa-clock"></i> Стаж: 8 лет</span>
+                        <span><i class="fas fa-star"></i> Эксперт</span>
+                    </div>
+                    <p class="master-bio">Мастер мужских стрижек, тонирования и камуфляжа волос, оформления бороды.</p>
+                    <button class="master-book">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

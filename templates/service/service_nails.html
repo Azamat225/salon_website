@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Ногтевой сервис{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="service-detail-hero nails-bg">
+    <div class="container">
+        <div class="service-detail-content">
+            <a href="{{ url_for('services') }}" class="back-link">← Назад к услугам</a>
+            <span class="service-badge">💅 Ногтевой сервис</span>
+            <h1>Профессиональный маникюр и педикюр</h1>
+            <p class="lead">Наши мастера предоставляют полный комплекс услуг по уходу за руками и ногами с использованием современных технологий.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BODY -->
+<section class="service-detail-body">
+    <div class="container">
+        <div class="service-detail-grid">
+            <!-- Левая колонка -->
+            <div class="service-main">
+
+                <!-- Вступление -->
+                <div class="service-text-block">
+                    <h2>Полный комплекс услуг маникюра</h2>
+                    <p>Наши профессиональные мастера знакомы со всеми техниками и видами маникюра. В списке наших услуг вы найдете комбинированный, обрезной, аппаратный, японский, SPA-процедуры для кожи рук, парафинотерапию.</p>
+                    <p>Вы сможете придать своим ногтям желаемую форму и отполировать их, покрыть любым цветным гелем, заказать френч-покрытие или индивидуальный дизайн.</p>
+                </div>
+
+                <!-- ФОТО 1 + 2 (рядом) -->
+                <div class="service-image-row">
+                    <div class="service-image-block">
+                        <img src="{{ url_for('static', filename='images/services/nails/nails-manicure-1.jpg') }}"
+                             alt="Маникюр в салоне У Платоши">
+                        <p class="image-caption">Профессиональный маникюр с использованием лучших материалов</p>
+                    </div>
+                    <div class="service-image-block">
+                        <img src="{{ url_for('static', filename='images/services/nails/nails-manicure-2.jpg') }}"
+                             alt="Дизайн ногтей в салоне У Платоши">
+                        <p class="image-caption">Индивидуальный дизайн и покрытие гель-лак</p>
+                    </div>
+                </div>
+
+
+                <!-- ФОТО 3 + 4 (рядом) -->
+                <div class="service-image-row">
+                    <div class="service-image-block">
+                        <img src="{{ url_for('static', filename='images/services/nails/nails-manicure-3.jpg') }}"
+                             alt="Педикюр в салоне У Платоши">
+                        <p class="image-caption">Профессиональный педикюр с уходом за кожей стоп</p>
+                    </div>
+                    <div class="service-image-block">
+                        <img src="{{ url_for('static', filename='images/services/nails/nails-manicure-4.jpg') }}"
+                             alt="Уход за ногами в салоне У Платоши">
+                        <p class="image-caption">SPA-уход и парафинотерапия для ног</p>
+                    </div>
+                </div>
+
+                <!-- Педикюр -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-foot"></i> Профессиональный педикюр – красота и здоровье ваших ног</h2>
+                    <p>Педикюр является одной из наиболее приятных и полезных процедур, которую ежемесячно используют в уходе за своими ногами как мужчины, так и женщины. Регулярное проведение процедуры педикюра у квалифицированных мастеров нашего салона вернет вашим стопам младенческую мягкость и нежность, а ваши ногти будут всегда иметь правильную аккуратную форму без врастаний и воспалений.</p>
+                </div>
+
+
+                <!-- CTA -->
+                <div class="service-cta">
+                    <a href="#" class="btn-primary">Записаться на маникюр</a>
+                </div>
+            </div>
+
+            <!-- Правая колонка - сайдбар -->
+            <div class="service-sidebar">
+                <div class="sidebar-card">
+                    <h3>Услуги ногтевого сервиса</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Классический маникюр</li>
+                        <li><i class="fas fa-check-circle"></i> Аппаратный маникюр</li>
+                        <li><i class="fas fa-check-circle"></i> Японский маникюр</li>
+                        <li><i class="fas fa-check-circle"></i> Покрытие гель-лак</li>
+                        <li><i class="fas fa-check-circle"></i> Дизайн ногтей</li>
+                        <li><i class="fas fa-check-circle"></i> SPA-уход для рук</li>
+                        <li><i class="fas fa-check-circle"></i> Педикюр</li>
+                        <li><i class="fas fa-check-circle"></i> IBX-лечение</li>
+                        <li><i class="fas fa-check-circle"></i> Парафинотерапия</li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><i class="fas fa-phone"></i> +7 (987) 03-05-861</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Коммунистическая 84</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Косметология{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="service-detail-hero cosmetology-bg">
+    <div class="container">
+        <div class="service-detail-content">
+            <a href="{{ url_for('services') }}" class="back-link">← Назад к услугам</a>
+            <span class="service-badge">✨ Косметология</span>
+            <h1>Все виды косметологических процедур</h1>
+            <p class="lead">Специалисты нашего салона знакомы со всеми современными косметологическими методиками и достижениями.</p>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-body">
+    <div class="container">
+        <div class="service-detail-grid">
+            <div class="service-main">
+                <div class="service-text-block">
+                    <h2>Индивидуальный подход к вашей коже</h2>
+                    <p>Наши специалисты тщательно изучат тип вашей кожи и профессионально подберут для вас именно те процедуры, которые пойдут на пользу вашей внешности и сделают вас еще более совершенными и привлекательными.</p>
+                </div>
+
+                <div class="service-text-block">
+                    <h2><i class="fas fa-spa"></i> Уходовые процедуры</h2>
+                    <p>К вашим услугам: маски, пилинги, ультразвуковая чистка, фонофорез, ультразвуковой лифтинг, механическая чистка. Программы по уходу за лицом: лифтинг, программа очищения, anti age, антикупероз, экспресс-программы, массаж, парафинотерапия.</p>
+                </div>
+
+                <div class="service-text-block">
+                    <h2><i class="fas fa-microchip"></i> Аппаратные методики</h2>
+                    <p>Современные аппаратные процедуры: микротоки, миолифтинг, ионофорез, броссаж, дарсонваль, RF-лифтинг, электропорация. Все процедуры выполняются на профессиональном оборудовании ведущих брендов.</p>
+                </div>
+
+                <div class="service-cta">
+                    <a href="#" class="btn-primary">Записаться на процедуру</a>
+                </div>
+            </div>
+
+            <div class="service-sidebar">
+                <div class="sidebar-card">
+                    <h3>Процедуры косметолога</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Уходовые процедуры</li>
+                        <li><i class="fas fa-check-circle"></i> Аппаратная косметология</li>
+                        <li><i class="fas fa-check-circle"></i> Чистка лица</li>
+                        <li><i class="fas fa-check-circle"></i> Пилинги</li>
+                        <li><i class="fas fa-check-circle"></i> Массаж лица</li>
+                        <li><i class="fas fa-check-circle"></i> Anti-age программы</li>
+                        <li><i class="fas fa-check-circle"></i> RF-лифтинг</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

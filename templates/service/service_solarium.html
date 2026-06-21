@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Солярий{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="service-detail-hero solarium-bg">
+    <div class="container">
+        <div class="service-detail-content">
+            <a href="{{ url_for('services') }}" class="back-link">← Назад к услугам</a>
+            <span class="service-badge">☀️ Солярий</span>
+            <h1>Красивый и ровный загар круглый год</h1>
+            <p class="lead">Специально оборудованная площадка для проведения дозированных облучений с использованием ультрафиолетовых ламп с защитой от опасной коротковолновой части спектра.</p>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-body">
+    <div class="container">
+        <div class="service-detail-grid">
+            <div class="service-main">
+                <div class="service-text-block">
+                    <h2>Современное оборудование для безопасного загара</h2>
+                    <p>В нашем салоне установлены профессиональные солярии с высококачественными ультрафиолетовыми лампами. Специальные добавки в стекле колб ламп не пропускают опасную коротковолновую часть УФ-спектра, что делает процедуру максимально безопасной.</p>
+                    <p>Мы предлагаем как вертикальные, так и горизонтальные солярии — выбирайте тот, который вам удобнее.</p>
+                </div>
+
+                <div class="service-text-block">
+                    <h2><i class="fas fa-bottle"></i> Косметика для загара</h2>
+                    <p>Для достижения наилучшего результата мы рекомендуем использовать специальную косметику для загара, которая увлажняет кожу, закрепляет цвет и продлевает стойкость загара. В нашем салоне вы можете приобрести профессиональные средства для ухода за кожей до и после загара.</p>
+                </div>
+
+                <div class="service-text-block">
+                    <h2><i class="fas fa-clock"></i> Рекомендации по посещению</h2>
+                    <ul>
+                        <li>— Начинайте с 3-5 минут, постепенно увеличивая время</li>
+                        <li>— Используйте защитные очки</li>
+                        <li>— Используйте специальные кремы для загара</li>
+                        <li>— Не посещайте солярий чаще 2 раз в неделю</li>
+                        <li>— При наличии противопоказаний проконсультируйтесь с врачом</li>
+                    </ul>
+                </div>
+
+                <div class="service-cta">
+                    <a href="#" class="btn-primary">Записаться в солярий</a>
+                </div>
+            </div>
+
+            <div class="service-sidebar">
+                <div class="sidebar-card">
+                    <h3>В солярии вы получите</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Вертикальный солярий</li>
+                        <li><i class="fas fa-check-circle"></i> Горизонтальный солярий</li>
+                        <li><i class="fas fa-check-circle"></i> Профессиональные лампы</li>
+                        <li><i class="fas fa-check-circle"></i> Косметика для загара</li>
+                        <li><i class="fas fa-check-circle"></i> Комфортные условия</li>
+                        <li><i class="fas fa-check-circle"></i> Консультация специалиста</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -95,3 +95,133 @@
 .styles .gallery-item:hover .overlay {
     transform: translateY(0);
 }
+
+/* ============================================
+   GALLERY HERO
+   ============================================ */
+
+.gallery-hero {
+    background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 100%);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.gallery-hero-content h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.gallery-hero-content p {
+    opacity: 0.9;
+    font-size: 18px;
+}
+
+/* ============================================
+   GALLERY CARDS GRID
+   ============================================ */
+
+.gallery-grid-section {
+    padding: 60px 0 80px;
+    background: var(--white-soft);
+}
+
+.gallery-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.gallery-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.4s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-image img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 109, 94, 0.7) 0%, rgba(15, 77, 66, 0.8) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay .gallery-icon {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.gallery-overlay h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.gallery-card-footer {
+    padding: 18px 24px;
+}
+
+.gallery-card-footer p {
+    color: var(--gray);
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .gallery-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .gallery-image {
+        height: 220px;
+    }
+    .gallery-hero-content h1 {
+        font-size: 32px;
+    }
+    .gallery-overlay h3 {
+        font-size: 18px;
+    }
+}

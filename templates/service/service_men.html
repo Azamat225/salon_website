@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Мужской зал{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="service-detail-hero men-bg">
+    <div class="container">
+        <div class="service-detail-content">
+            <a href="{{ url_for('services') }}" class="back-link">← Назад к услугам</a>
+            <span class="service-badge">👨 Мужской зал</span>
+            <h1>Мужские стрижки и барбер-услуги</h1>
+            <p class="lead">Наши опытные парикмахеры-стилисты создадут профессиональную мужскую стрижку с учетом формы
+                головы, структуры и направления роста волос.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BODY -->
+<section class="service-detail-body">
+    <div class="container">
+        <div class="service-detail-grid">
+            <!-- Левая колонка -->
+            <div class="service-main">
+
+                <!-- Вступление -->
+                <div class="service-text-block">
+                    <h2>Стильные мужские стрижки</h2>
+                    <p>Наши опытные парикмахеры-стилисты создадут профессиональную мужскую стрижку с учетом формы вашей
+                        головы, а также структуры и направления роста ваших волос. Мы внимательно следим за всеми
+                        тенденциями и новинками мира парикмахерской моды и сможем создать для вас наиболее модную и
+                        современную стрижку.</p>
+                </div>
+
+                <!-- ФОТО 1 (мужская стрижка) -->
+                <div class="service-image-block">
+                    <img class="men-haircut-img"
+                         src="{{ url_for('static', filename='images/services/men/men-haircut.jpg') }}"
+                         alt="Мужская стрижка в салоне У Платоши">
+                    <p class="image-caption">Профессиональная мужская стрижка от мастеров салона «У Платоши»</p>
+                </div>
+
+                <!-- Оформление бороды -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-beard"></i> Оформление бороды и усов</h2>
+                    <p>Для брутальных мужчин у нас есть услуга — стрижка и оформление усов и бороды. Наши мастера
+                        создадут идеальную форму, подчеркивающую вашу индивидуальность и стиль.</p>
+                </div>
+
+                <!-- ФОТО 2 -->
+                <div class="service-image-block">
+                    <img src="{{ url_for('static', filename='images/services/men/men-beard.jpg') }}"
+                         alt="Оформление бороды в салоне У Платоши">
+                    <p class="image-caption">Стильное оформление бороды и усов для настоящих мужчин</p>
+                </div>
+
+                <!-- Дополнительные услуги -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-cut"></i> Тонирование и камуфляж</h2>
+                    <p>Освежите свой образ с помощью тонирования или камуфляжа волос. Натуральные оттенки, маскировка
+                        седины и придание волосам здорового блеска.</p>
+                </div>
+
+                <div class="service-text-block">
+                    <h2><i class="fas fa-child"></i> Детские стрижки</h2>
+                    <p>Мы знаем, как важно, чтобы ваш ребенок чувствовал себя комфортно. Наши мастера найдут подход к
+                        каждому маленькому клиенту, создадут аккуратную и красивую стрижку.</p>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                    <a href="#" class="btn-primary">Записаться на стрижку</a>
+                </div>
+            </div>
+
+            <!-- Правая колонка - сайдбар -->
+            <div class="service-sidebar">
+                <div class="sidebar-card">
+                    <h3>Услуги мужского зала</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Мужские стрижки</li>
+                        <li><i class="fas fa-check-circle"></i> Оформление бороды и усов</li>
+                        <li><i class="fas fa-check-circle"></i> Тонирование и камуфляж</li>
+                        <li><i class="fas fa-check-circle"></i> Детские стрижки</li>
+                        <li><i class="fas fa-check-circle"></i> Hair Tattoo</li>
+                        <li><i class="fas fa-check-circle"></i> Мытье и укладка</li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><i class="fas fa-phone"></i> +7 (987) 03-05-861</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Коммунистическая 84</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

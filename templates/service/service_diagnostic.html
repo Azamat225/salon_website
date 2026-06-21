@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Диагностика волос{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service_detail.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="service-detail-hero diagnostic-bg">
+    <div class="container">
+        <div class="service-detail-content">
+            <a href="{{ url_for('services') }}" class="back-link">← Назад к услугам</a>
+            <span class="service-badge">🔬 Диагностика волос</span>
+            <h1>Комплексная диагностика состояния волос</h1>
+            <p class="lead">С помощью современного оборудования специалисты изучат состояние ваших волос и порекомендуют процедуры по восстановлению и лечению.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BODY -->
+<section class="service-detail-body">
+    <div class="container">
+        <div class="service-detail-grid">
+            <!-- Левая колонка -->
+            <div class="service-main">
+
+                <!-- Вступление -->
+                <div class="service-text-block">
+                    <h2>Наука о волосах</h2>
+                    <p>Одной из отличительных особенностей наших парикмахерских является наличие диагностического оборудования и предоставление услуг парикмахера на комплексное профессиональное обслуживание.</p>
+                    <p>У нас каждый парикмахер проводит комплексную и полноценную диагностику волос и кожи головы, определяет проблему и способы ее устранения, и по результатам диагностики подбирает и выполняет лечебные процедуры и все парикмахерские услуги. Благодаря такому сочетанию результаты не заставят себя ждать!</p>
+                </div>
+
+                <!-- Новые технологии -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-microscope"></i> Новые технологии в оздоровлении</h2>
+                    <p>Наш салон имеет практический характер и представляет новые технологии в оздоровлении волос и кожи волосистой части головы, уникальные методики по восстановлению волос с применением высокоэффективных, качественных препаратов. Предлагает индивидуальный подбор схемы восстановления различных проблем волос и кожи головы, что позволяет на долгие годы сохранить Ваши волосы здоровыми.</p>
+                    <p>Комплексное воздействие дает возможность уже после нескольких процедур остановить выпадение волос любого происхождения и радикально решить такие проблемы, как: себорея, себорейный дерматит, грибок, перхоть, гипергидроз, нарушения функции сальных желез, повреждения стебля волоса и т.д.</p>
+                </div>
+
+                <!-- ФОТО 1 (диагностика) - ВО ВСЮ ШИРИНУ -->
+                <div class="service-image-block full-width">
+                    <img src="{{ url_for('static', filename='images/services/diagnostic/diagnostic-device.jpg') }}"
+                         alt="Диагностика волос в салоне У Платоши">
+                    <p class="image-caption">Современное оборудование для комплексной диагностики состояния волос и кожи головы</p>
+                </div>
+
+                <!-- Восстановление и лечение -->
+                <div class="service-text-block">
+                    <h2><i class="fas fa-heart"></i> Восстановление и лечение волос</h2>
+                    <p>После частого окрашивания и применения фена и плойки ваши волосы стали сухими и безжизненными? Восстановите их красоту и здоровый блеск с помощью уходовых процедур – экранирование, термокератирование, SPA-уход за кожей головы и многое другое.</p>
+                </div>
+
+                <!-- ФОТО 2 (восстановление) - ВО ВСЮ ШИРИНУ -->
+                <div class="service-image-block full-width">
+                    <img src="{{ url_for('static', filename='images/services/diagnostic/diagnostic-treatment.jpg') }}"
+                         alt="Восстановление волос в салоне У Платоши">
+                    <p class="image-caption">Процедуры восстановления и лечения волос с использованием профессиональных средств</p>
+                </div>
+
+                <!-- ФОТО 3 (результат) - ВО ВСЮ ШИРИНУ -->
+                <div class="service-image-block full-width">
+                    <img src="{{ url_for('static', filename='images/services/diagnostic/diagnostic-result.jpg') }}"
+                         alt="Здоровые волосы после процедур в салоне У Платоши">
+                    <p class="image-caption">Результат комплексного подхода — здоровые и сильные волосы</p>
+                </div>
+
+                <!-- CTA -->
+                <div class="service-cta">
+                    <a href="#" class="btn-primary">Записаться на диагностику</a>
+                </div>
+            </div>
+
+            <!-- Правая колонка - сайдбар -->
+            <div class="service-sidebar">
+                <div class="sidebar-card">
+                    <h3>Услуги диагностики</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Диагностика волос</li>
+                        <li><i class="fas fa-check-circle"></i> Восстановление и лечение</li>
+                        <li><i class="fas fa-check-circle"></i> Аппаратные методики</li>
+                        <li><i class="fas fa-check-circle"></i> Рекомендации по уходу</li>
+                        <li><i class="fas fa-check-circle"></i> Салонные процедуры</li>
+                        <li><i class="fas fa-check-circle"></i> Пилинг кожи головы</li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><i class="fas fa-phone"></i> +7 (987) 03-05-861</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Коммунистическая 84</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

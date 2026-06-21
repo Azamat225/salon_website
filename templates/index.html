@@ -6,31 +6,63 @@
 <section class="hero">
     <div class="swiper hero-swiper">
         <div class="swiper-wrapper">
+            <!-- Слайд 1 -->
             <div class="swiper-slide">
-                <div class="slide-bg green-1"></div>
+                <div class="slide-bg green-1">
+                    <img src="{{ url_for('static', filename='images/slider/slide-1.jpg') }}"
+                         alt="Акция -20% на первое посещение">
+                </div>
                 <div class="slide-content">
-                    <span class="slide-badge">✨ Акция</span>
-                    <h2 class="slide-title">-20% на первое<br>посещение</h2>
-                    <p class="slide-text">Для новых клиентов при онлайн-записи</p>
+                    <h2 class="slide-title">Прически</h2>
                     <a href="#" class="btn-primary">Записаться</a>
                 </div>
             </div>
+
+            <!-- Слайд 2 -->
             <div class="swiper-slide">
-                <div class="slide-bg green-2"></div>
+                <div class="slide-bg green-2">
+                    <img src="{{ url_for('static', filename='images/slider/slide-2.jpg') }}"
+                         alt="Комбо Маникюр + Педикюр">
+                </div>
                 <div class="slide-content">
-                    <span class="slide-badge">💎 Комбо</span>
-                    <h2 class="slide-title">Маникюр + Педикюр<br><span class="price-tag">2 500 ₽</span></h2>
-                    <p class="slide-text">Комплексный уход за руками и ногами</p>
+                    <h2 class="slide-title">Оформление бороды и усов</h2>
                     <a href="#" class="btn-primary">Выбрать время</a>
                 </div>
             </div>
+
+            <!-- Слайд 3 -->
             <div class="swiper-slide">
-                <div class="slide-bg green-3"></div>
+                <div class="slide-bg green-3">
+                    <img src="{{ url_for('static', filename='images/slider/slide-3.jpg') }}"
+                         alt="Подарочные сертификаты">
+                </div>
                 <div class="slide-content">
-                    <span class="slide-badge">🎁 Подарок</span>
-                    <h2 class="slide-title">Подарочные<br>сертификаты</h2>
-                    <p class="slide-text">Лучший подарок для близких</p>
+                    <h2 class="slide-title">Мужские стрижки</h2>
                     <a href="#" class="btn-primary">Узнать больше</a>
+                </div>
+            </div>
+
+            <!-- Слайд 4 -->
+            <div class="swiper-slide">
+                <div class="slide-bg green-1">
+                    <img src="{{ url_for('static', filename='images/slider/slide-4.jpg') }}"
+                         alt="Свадебные прически">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Косметология</h2>
+                    <a href="#" class="btn-primary">Подробнее</a>
+                </div>
+            </div>
+
+            <!-- Слайд 5 -->
+            <div class="swiper-slide">
+                <div class="slide-bg green-2">
+                    <img src="{{ url_for('static', filename='images/slider/slide-5.jpg') }}"
+                         alt="Косметология">
+                </div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Процедуры ухода за волосами</h2>
+                    <a href="#" class="btn-primary">Записаться</a>
                 </div>
             </div>
         </div>
@@ -40,53 +72,71 @@
     </div>
 </section>
 
-<!-- Popular Services -->
-<section class="popular">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Популярное</span>
-            <h2 class="section-title">Самые востребованные<br><span class="green-text">услуги</span></h2>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="card-icon">
-                    <i class="fas fa-hand-sparkles"></i>
-                </div>
-                <h3>Маникюр</h3>
-                <p>Классический, аппаратный, с покрытием гель-лак. Уход за кутикулой и массаж.</p>
-                <div class="card-price">от 800 ₽</div>
-                <a href="#" class="card-link">Записаться <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="card-icon">
-                    <i class="fas fa-cut"></i>
-                </div>
-                <h3>Стрижка</h3>
-                <p>Женские, мужские, детские стрижки. Работаем с волосами любой сложности.</p>
-                <div class="card-price">от 600 ₽</div>
-                <a href="#" class="card-link">Записаться <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="card-icon">
-                    <i class="fas fa-brush"></i>
-                </div>
-                <h3>Макияж</h3>
-                <p>Дневной, вечерний, свадебный макияж. Профессиональная косметика.</p>
-                <div class="card-price">от 1 500 ₽</div>
-                <a href="#" class="card-link">Записаться <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About -->
+<!-- About Section -->
 <section class="about">
     <div class="container">
         <div class="about-wrapper">
             <div class="about-content">
-                <span class="section-tag">О салоне</span>
-                <h2>Пространство <span class="green-text">красоты и гармонии</span></h2>
-                <p>"У Платоши" — это сеть премиум-салонов красоты в Стерлитамаке. Наши мастера — профессионалы с опытом от 5 лет, использующие только лучшие бренды косметики.</p>
+                <span class="section-tag">О нас</span>
+                <h2>Салон красоты <span class="green-text">«У Платоши»</span></h2>
+
+                <div class="about-text">
+                    <p class="lead">
+                        Сеть салонов красоты «У Платоши» предлагает качественные парикмахерские услуги по выгодным ценам.
+                        <span class="highlight">«У Платоши»</span> — принципиально новый формат парикмахерской с демократичной
+                        ценовой политикой и высоким качеством обслуживания, ориентированной на посещение всей семьи.
+                    </p>
+
+                    <p>
+                        За минимальную стоимость мастера-профессионалы сделают для Вас элегантную укладку, модельную стрижку,
+                        покраску волос, а также еще множество услуг по самым выгодным ценам. Приоритетными направлениями сети
+                        парикмахерских «У Платоши» являются <span class="highlight">качество, доступность, ориентированность на семью</span>.
+                    </p>
+
+                    <p>
+                        Мы в наших парикмахерских стремимся к совершенству: всегда хорошо выглядеть и отлично себя чувствовать
+                        могут как женщины, так и мужчины. Разумеется, что без внимания не остаются и дети.
+                    </p>
+                </div>
+
+                <!-- Преимущества -->
+                <div class="advantages">
+                    <div class="advantage-item">
+                        <div class="advantage-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div>
+                            <h4>Индивидуальный подход</h4>
+                            <p>К каждому клиенту — особое внимание и забота</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div>
+                            <h4>Гибкая ценовая политика</h4>
+                            <p>Доступные цены без потери качества</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div>
+                            <h4>Благоприятная инфраструктура</h4>
+                            <p>Уютные салоны в разных районах города</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Слоган -->
+                <div class="slogan">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Красивая прическа — хорошее настроение — прекрасный день!</p>
+                    <span class="slogan-author">Слоган нашей сети</span>
+                </div>
+
                 <div class="stats">
                     <div class="stat">
                         <div class="stat-number">8+</div>
@@ -94,36 +144,37 @@
                     </div>
                     <div class="stat">
                         <div class="stat-number">5000+</div>
-                        <div class="stat-label">клиентов</div>
+                        <div class="stat-label">довольных клиентов</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">15+</div>
-                        <div class="stat-label">мастеров</div>
+                        <div class="stat-label">мастеров-профессионалов</div>
                     </div>
                 </div>
-                <a href="{{ url_for('services') }}" class="btn-secondary">Все услуги <i class="fas fa-arrow-right"></i></a>
+
+                <a href="{{ url_for('services') }}" class="btn-secondary">
+                    Все услуги <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <div class="about-features">
-                <div class="feature">
-                    <i class="fas fa-gem"></i>
-                    <div>
-                        <h4>Премиум-бренды</h4>
-                        <p>L'Oreal, Estel, Schwarzkopf, OLLIN</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-microscope"></i>
-                    <div>
-                        <h4>Современное оборудование</h4>
-                        <p>Диагностика кожи головы, аппаратная косметология</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-heart"></i>
-                    <div>
-                        <h4>Индивидуальный подход</h4>
-                        <p>Для каждого клиента своя программа ухода</p>
-                    </div>
+
+            <!-- Список услуг (правый блок) -->
+            <div class="about-services">
+                <div class="services-list-card">
+                    <h3>Мы предлагаем:</h3>
+                    <ul class="services-list">
+                        <li><i class="fas fa-check-circle"></i> Стрижки мужские и женские</li>
+                        <li><i class="fas fa-check-circle"></i> Окрашивание и мелирование</li>
+                        <li><i class="fas fa-check-circle"></i> Биохимическая завивка</li>
+                        <li><i class="fas fa-check-circle"></i> Вечерние и свадебные прически</li>
+                        <li><i class="fas fa-check-circle"></i> Оформление бороды и усов</li>
+                        <li><i class="fas fa-check-circle"></i> Hair Tattoo</li>
+                        <li><i class="fas fa-check-circle"></i> Окрашивание бровей и ресниц</li>
+                        <li><i class="fas fa-check-circle"></i> Наращивание ресниц</li>
+                        <li><i class="fas fa-check-circle"></i> Уход за волосами (пилинг, кератирование, ламинирование)</li>
+                        <li><i class="fas fa-check-circle"></i> Ногтевой сервис (дизайн, гель-лак, IBX)</li>
+                        <li><i class="fas fa-check-circle"></i> Косметология (аппаратная, уходовые процедуры)</li>
+                        <li><i class="fas fa-check-circle"></i> Солярий</li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -6,163 +6,97 @@
     <title>У Платоши | Премиум салон красоты</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1>У Платоши</h1>
-                        <p>beauty & harmony</p>
-                    </div>
+<header class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <!-- Логотип с картинкой -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="У Платоши">
                 </div>
-
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="{{ url_for('index') }}">Главная</a></li>
-                        <li><a href="{{ url_for('services') }}">Услуги и цены</a></li>
-                        <li><a href="{{ url_for('masters') }}">Мастера</a></li>
-                        <li class="dropdown">
-                            <a href="#">Галерея <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ url_for('gallery_before') }}">До/После</a></li>
-                                <li><a href="{{ url_for('gallery_styles') }}">Примеры стилей</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
-                    </ul>
-                </nav>
-
-                <div class="header-actions">
-                    <a href="tel:+79870305861" class="phone-link">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>+7 (987) 03-05-861</span>
-                    </a>
-                    <button class="booking-btn" id="bookingBtn">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Запись</span>
-                    </button>
-                    <div class="burger">
-                        <span></span><span></span><span></span>
-                    </div>
+                <div class="logo-text">
+                    <h1>У Платоши</h1>
+                    <p>beauty & harmony</p>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="{{ url_for('index') }}">Главная</a></li>
+                    <li><a href="{{ url_for('services') }}">Услуги и цены</a></li>
+                    <li><a href="{{ url_for('masters') }}">Мастера</a></li>
+                    <li><a href="{{ url_for('gallery') }}">Галерея</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                </ul>
+            </nav>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <i class="fas fa-leaf"></i>
-                        <span>У Платоши</span>
-                    </div>
-                    <p>Премиум салон красоты в Стерлитамаке. Создаем красоту и гармонию с 2016 года.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <h4>Навигация</h4>
-                    <ul>
-                        <li><a href="{{ url_for('index') }}">Главная</a></li>
-                        <li><a href="{{ url_for('services') }}">Услуги и цены</a></li>
-                        <li><a href="{{ url_for('masters') }}">Наши мастера</a></li>
-                        <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contacts">
-                    <h4>Наши салоны</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> ул. Коммунистическая 84</p>
-                    <p><i class="fas fa-map-marker-alt"></i> ул. Худайбердина 122</p>
-                    <p><i class="fas fa-map-marker-alt"></i> пр. Октября 17</p>
-                    <p><i class="fas fa-map-marker-alt"></i> пр. Ленина 65</p>
-                    <p class="work-hours"><i class="fas fa-clock"></i> Пн-Сб: 09:00-20:00 | Вс: 09:00-18:00</p>
+            <div class="header-actions">
+                <a href="tel:+79870305861" class="phone-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+7 (987) 03-05-861</span>
+                </a>
+                <div class="burger">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Салон красоты "У Платоши" | ИП Ковальская С.Ф.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-header">
-                <i class="fas fa-spa"></i>
-                <h2>Запись онлайн</h2>
-                <p>Оставьте заявку, мы перезвоним</p>
-            </div>
-            <form id="bookingForm">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Ваше имя" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-phone"></i>
-                    <input type="tel" placeholder="Телефон" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-cut"></i>
-                    <select required>
-                        <option value="">Выберите услугу</option>
-                        <option>Женская стрижка</option>
-                        <option>Мужская стрижка</option>
-                        <option>Маникюр</option>
-                        <option>Педикюр</option>
-                        <option>Окрашивание</option>
-                        <option>Косметология</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-store"></i>
-                    <select required>
-                        <option value="">Выберите салон</option>
-                        <option>ул. Коммунистическая 84</option>
-                        <option>ул. Худайбердина 122</option>
-                        <option>пр. Октября 17</option>
-                        <option>пр. Ленина 65</option>
-                    </select>
-                </div>
-                <div class="input-row">
-                    <div class="input-group half">
-                        <i class="fas fa-calendar"></i>
-                        <input type="date" required>
-                    </div>
-                    <div class="input-group half">
-                        <i class="fas fa-clock"></i>
-                        <input type="time" required>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn">
-                    <span>Отправить заявку</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </form>
         </div>
     </div>
+</header>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    {% block extra_js %}{% endblock %}
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>У Платоши</span>
+                </div>
+                <p>Премиум салон красоты в Стерлитамаке. Создаем красоту и гармонию с 2016 года.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Главная</a></li>
+                    <li><a href="{{ url_for('services') }}">Услуги и цены</a></li>
+                    <li><a href="{{ url_for('masters') }}">Наши мастера</a></li>
+                    <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <h4>Наши салоны</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ул. Коммунистическая 84</p>
+                <p><i class="fas fa-map-marker-alt"></i> ул. Худайбердина 122</p>
+                <p><i class="fas fa-map-marker-alt"></i> пр. Октября 17</p>
+                <p><i class="fas fa-map-marker-alt"></i> пр. Ленина 65</p>
+                <p class="work-hours"><i class="fas fa-clock"></i> Пн-Сб: 09:00-20:00 | Вс: 09:00-18:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Салон красоты "У Платоши" | ИП Ковальская С.Ф.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% block extra_js %}{% endblock %}
 </body>
 </html>

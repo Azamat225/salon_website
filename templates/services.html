@@ -5,89 +5,229 @@
 {% endblock %}
 
 {% block content %}
-<section class="price-hero">
+<!-- Hero секция -->
+<section class="services-hero">
     <div class="container">
-        <div class="price-hero-content">
-            <span class="section-tag white">💰 Прайс-лист</span>
-            <h1>Стоимость <span class="green-text">услуг</span></h1>
-            <p>ИП «Ковальская С.Ф.» | Салон красоты «У Платоши»</p>
+        <div class="services-hero-content">
+            <span class="section-tag white">🌟 Наши услуги</span>
+            <h1>Мы рады предложить вам <br><span class="highlight-text">весь спектр услуг</span></h1>
+            <p>Профессиональный уход и красота для всей семьи</p>
         </div>
     </div>
 </section>
 
-<div class="container">
-    <!-- Женский зал -->
-    <div class="price-block">
-        <div class="price-block-header">
-            <i class="fas fa-female"></i>
-            <h2>Женский зал</h2>
-        </div>
-        <div class="table-wrapper">
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>Наименование работ</th>
-                        <th>Цена с диагн.</th>
-                        <th>Цена без диагн.</th>
-                        <th>NEW Мастер</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Диагностика волос</td><td>500</td><td>500</td><td>—</td></tr>
-                    <tr><td>Стрижка женская</td><td>300</td><td>330</td><td>200</td></tr>
-                    <tr><td>Стрижка креативная</td><td>360</td><td>400</td><td>250</td></tr>
-                    <tr><td>Стрижка «Каре», «Каскад»</td><td>330</td><td>370</td><td>250</td></tr>
-                    <tr><td>Стрижка челки</td><td>120</td><td>130</td><td>70</td></tr>
-                    <tr><td>Мытье головы</td><td>50</td><td>60</td><td>30-50</td></tr>
-                    <tr><td>Стрижка пенсионная</td><td>240</td><td>270</td><td>150</td></tr>
-                    <tr><td>Укладка (короткая/средняя/удл.)</td><td>270-450</td><td>220-500</td><td>—</td></tr>
-                    <tr><td>Химическая завивка (Schwarzkopf)</td><td>700-900</td><td>770-990</td><td>—</td></tr>
-                    <tr><td>Биозавивка (Niagara)</td><td>800-1000</td><td>850-1200</td><td>—</td></tr>
-                    <tr><td>Мелирование</td><td>800-2500</td><td>850-3000</td><td>—</td></tr>
-                    <tr><td>Окрашивание (Estel, Kapous)</td><td>800-1700</td><td>880-2200</td><td>—</td></tr>
-                    <tr><td>Окрашивание «Омбре»</td><td colspan="2">2000-4000</td><td>2200-4400</td></tr>
-                    <tr><td>Кератиновое выпрямление</td><td>1650-2500</td><td>1700-2750</td><td>—</td></tr>
-                    <tr><td>Оформление бровей</td><td>220</td><td>220</td><td>—</td></tr>
-                    <tr><td>Покраска бровей хной</td><td colspan="2">400</td><td>—</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+<!-- 6 блоков услуг -->
+<section class="services-grid-section">
+    <div class="container">
+        <div class="services-cards-grid">
 
-    <!-- Мужской зал -->
-    <div class="price-block">
-        <div class="price-block-header">
-            <i class="fas fa-male"></i>
-            <h2>Мужской зал</h2>
-        </div>
-        <div class="table-wrapper">
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>Наименование работ</th>
-                        <th>Цена с диагн.</th>
-                        <th>Цена без диагн.</th>
-                        <th>NEW Мастер</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Диагностика волос</td><td>300</td><td>330</td><td>300</td></tr>
-                    <tr><td>Стрижка модельная</td><td>230</td><td>260</td><td>200</td></tr>
-                    <tr><td>Стрижка «Бокс», «Полубокс»</td><td>200</td><td>220</td><td>180</td></tr>
-                    <tr><td>Стрижка пенсионная</td><td>200</td><td>220</td><td>150</td></tr>
-                    <tr><td>Стрижка креативная</td><td>280</td><td>310</td><td>250</td></tr>
-                    <tr><td>Стрижка «Наголо»</td><td>100</td><td>120</td><td>100</td></tr>
-                    <tr><td>Стрижка детская</td><td>200</td><td>220</td><td>150</td></tr>
-                    <tr><td>Оформление бороды</td><td colspan="2">100-200</td><td>—</td></tr>
-                    <tr><td>Hair Tattoo</td><td>100-200</td><td>110-220</td><td>—</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <!-- 1. Женский зал -->
+            <div class="service-card-large">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='images/services/service-women.png') }}" alt="Женский зал">
+                </div>
+                <div class="card-header women-header">
+                    <i class="fas fa-female"></i>
+                    <h3>Женский зал</h3>
+                </div>
+                <div class="card-body">
+                    <p>Подчеркнуть достоинства внешности вам помогут профессиональные мастера салона «У Платоши». Вам подберут идеальную стрижку и помогут сохранить ваши волосы здоровыми и сильными.</p>
+                    <div class="service-tags">
+                        <span>Стрижки, Прически, Завивка</span>
+                        <span>Окрашивание и колорирование</span>
+                        <span>Брови</span>
+                        <span>Детские стрижки</span>
+                    </div>
+                    <a href="{{ url_for('service_women') }}" class="btn-detail">Подробнее →</a>
+                </div>
+            </div>
 
-    <div class="price-note">
-        <i class="fas fa-info-circle"></i>
-        <p>Цены ориентировочные. Точную стоимость уточняйте у администратора. Действуют накопительные скидки.</p>
+            <!-- 2. Ногтевой сервис -->
+            <div class="service-card-large">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='images/services/service-nails.png') }}" alt="Ногтевой сервис">
+                </div>
+                <div class="card-header nails-header">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h3>Ногтевой сервис</h3>
+                </div>
+                <div class="card-body">
+                    <p>Профессиональный и эстетический маникюр – это основа привлекательной внешности и для мужчин, и для женщин. Опытные мастера позаботятся о ваших ручках с использованием современных технологий.</p>
+                    <div class="service-tags">
+                        <span>Маникюр</span>
+                        <span>Педикюр</span>
+                    </div>
+                    <a href="{{ url_for('service_nails') }}" class="btn-detail">Подробнее →</a>
+                </div>
+            </div>
+
+            <!-- 3. Косметология -->
+            <div class="service-card-large">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='images/services/service-cosmetology.png') }}" alt="Косметология">
+                </div>
+                <div class="card-header cosmetology-header">
+                    <i class="fas fa-spa"></i>
+                    <h3>Косметология</h3>
+                </div>
+                <div class="card-body">
+                    <p>Современная косметология способна творить чудеса. Наши косметологи владеют знаниями в области дерматологии и используют новейшие технологии и разработки.</p>
+                    <div class="service-tags">
+                        <span>Уходовые процедуры</span>
+                        <span>Аппаратные методики</span>
+                    </div>
+                    <a href="{{ url_for('service_cosmetology') }}" class="btn-detail">Подробнее →</a>
+                </div>
+            </div>
+
+            <!-- 4. Мужской зал -->
+            <div class="service-card-large">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='images/services/service-men.png') }}" alt="Мужской зал">
+                </div>
+                <div class="card-header men-header">
+                    <i class="fas fa-male"></i>
+                    <h3>Мужской зал</h3>
+                </div>
+                <div class="card-body">
+                    <p>Профессиональные мастера подберут идеальную стрижку с учетом формы головы, структуры и направления роста волос. Для брутальных мужчин — оформление бороды и усов.</p>
+                    <div class="service-tags">
+                        <span>Стрижки</span>
+                        <span>Тонирование и камуфляж</span>
+                        <span>Оформление бороды и усов</span>
+                        <span>Детские стрижки</span>
+                    </div>
+                    <a href="{{ url_for('service_men') }}" class="btn-detail">Подробнее →</a>
+                </div>
+            </div>
+
+            <!-- 5. Диагностика волос -->
+            <div class="service-card-large">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='images/services/service-diagnostic.png') }}" alt="Диагностика волос">
+                </div>
+                <div class="card-header diagnostic-header">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Диагностика волос</h3>
+                </div>
+                <div class="card-body">
+                    <p>Наука о волосах и волосистой части кожи головы. С помощью современного оборудования специалисты изучат состояние ваших волос и порекомендуют процедуры по восстановлению и лечению.</p>
+                    <div class="service-tags">
+                        <span>Восстановление и лечение</span>
+                        <span>Аппаратные методики</span>
+                        <span>Рекомендации по уходу</span>
+                        <span>Салонные процедуры</span>
+                    </div>
+                    <a href="{{ url_for('service_diagnostic') }}" class="btn-detail">Подробнее →</a>
+                </div>
+            </div>
+
+            <!-- 6. Солярий -->
+            <div class="service-card-large">
+                <div class="service-image">
+                    <img src="{{ url_for('static', filename='images/services/service-solarium.png') }}" alt="Солярий">
+                </div>
+                <div class="card-header solarium-header">
+                    <i class="fas fa-sun"></i>
+                    <h3>Солярий</h3>
+                </div>
+                <div class="card-body">
+                    <p>Специально оборудованная площадка для проведения дозированных облучений с использованием ультрафиолетовых ламп с защитой от опасной коротковолновой части спектра.</p>
+                    <div class="service-tags">
+                        <span>Вертикальный солярий</span>
+                        <span>Горизонтальный солярий</span>
+                        <span>Косметика для загара</span>
+                    </div>
+                    <a href="{{ url_for('service_solarium') }}" class="btn-detail">Подробнее →</a>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
+</section>
+
+<!-- Прайс-лист (оставляем как есть) -->
+<section class="price-section">
+    <div class="container">
+        <div class="price-header">
+            <span class="section-tag">💰 Прайс-лист</span>
+            <h2>Стоимость <span class="green-text">услуг</span></h2>
+            <p>ИП «Ковальская С.Ф.» | Салон красоты «У Платоши»</p>
+        </div>
+
+        <!-- Женский зал -->
+        <div class="price-block">
+            <div class="price-block-header">
+                <i class="fas fa-female"></i>
+                <h2>Женский зал</h2>
+            </div>
+            <div class="table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Наименование работ</th>
+                            <th>Цена с диагн.</th>
+                            <th>Цена без диагн.</th>
+                            <th>NEW Мастер</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Диагностика волос</td><td>500</td><td>500</td><td>—</td></tr>
+                        <tr><td>Стрижка женская</td><td>300</td><td>330</td><td>200</td></tr>
+                        <tr><td>Стрижка креативная</td><td>360</td><td>400</td><td>250</td></tr>
+                        <tr><td>Стрижка «Каре», «Каскад»</td><td>330</td><td>370</td><td>250</td></tr>
+                        <tr><td>Стрижка челки</td><td>120</td><td>130</td><td>70</td></tr>
+                        <tr><td>Мытье головы</td><td>50</td><td>60</td><td>30-50</td></tr>
+                        <tr><td>Стрижка пенсионная</td><td>240</td><td>270</td><td>150</td></tr>
+                        <tr><td>Укладка (короткая/средняя/удл.)</td><td>270-450</td><td>220-500</td><td>—</td></tr>
+                        <tr><td>Химическая завивка (Schwarzkopf)</td><td>700-900</td><td>770-990</td><td>—</td></tr>
+                        <tr><td>Биозавивка (Niagara)</td><td>800-1000</td><td>850-1200</td><td>—</td></tr>
+                        <tr><td>Мелирование</td><td>800-2500</td><td>850-3000</td><td>—</td></tr>
+                        <tr><td>Окрашивание (Estel, Kapous)</td><td>800-1700</td><td>880-2200</td><td>—</td></tr>
+                        <tr><td>Окрашивание «Омбре»</td><td colspan="2">2000-4000</td><td>2200-4400</td></tr>
+                        <tr><td>Кератиновое выпрямление</td><td>1650-2500</td><td>1700-2750</td><td>—</td></tr>
+                        <tr><td>Оформление бровей</td><td>220</td><td>220</td><td>—</td></tr>
+                        <tr><td>Покраска бровей хной</td><td colspan="2">400</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Мужской зал -->
+        <div class="price-block">
+            <div class="price-block-header">
+                <i class="fas fa-male"></i>
+                <h2>Мужской зал</h2>
+            </div>
+            <div class="table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Наименование работ</th>
+                            <th>Цена с диагн.</th>
+                            <th>Цена без диагн.</th>
+                            <th>NEW Мастер</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Диагностика волос</td><td>300</td><td>330</td><td>300</td></tr>
+                        <tr><td>Стрижка модельная</td><td>230</td><td>260</td><td>200</td></tr>
+                        <tr><td>Стрижка «Бокс», «Полубокс»</td><td>200</td><td>220</td><td>180</td></tr>
+                        <tr><td>Стрижка пенсионная</td><td>200</td><td>220</td><td>150</td></tr>
+                        <tr><td>Стрижка креативная</td><td>280</td><td>310</td><td>250</td></tr>
+                        <tr><td>Стрижка «Наголо»</td><td>100</td><td>120</td><td>100</td></tr>
+                        <tr><td>Стрижка детская</td><td>200</td><td>220</td><td>150</td></tr>
+                        <tr><td>Оформление бороды</td><td colspan="2">100-200</td><td>—</td></tr>
+                        <tr><td>Hair Tattoo</td><td>100-200</td><td>110-220</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="price-note">
+            <i class="fas fa-info-circle"></i>
+            <p>Цены ориентировочные. Точную стоимость уточняйте у администратора. Действуют накопительные скидки.</p>
+        </div>
+    </div>
+</section>
 {% endblock %}

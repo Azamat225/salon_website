@@ -1,14 +1,14 @@
 :root {
-    --green-primary: #1a6d5e;
-    --green-dark: #0f4d42;
-    --green-light: #2a9d8f;
-    --green-soft: #e8f5f2;
+    --green-primary: #e67e22;    /* оранжевый */
+    --green-dark: #d35400;       /* тёмный оранжевый */
+    --green-light: #f39c12;      /* светлый оранжевый */
+    --green-soft: #fef5e7;       /* очень светлый оранжевый (фон) */
     --white: #ffffff;
     --white-soft: #fafdfc;
     --gray: #6c757d;
     --gray-light: #e9ecef;
     --shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 25px 40px -12px rgba(26, 109, 94, 0.15);
+    --shadow-hover: 0 25px 40px -12px rgba(230, 126, 34, 0.15);
 }
 
 * {
@@ -547,8 +547,8 @@ body {
 
 /* Footer */
 .footer {
-    background: #1a2e2a;
-    color: #b8cfc8;
+    background: #6b3a1a;  /* тёмный оранжево-коричневый */
+    color: #f5e6d8;
     padding: 60px 0 30px;
 }
 

@@ -91,3 +91,47 @@ document.querySelectorAll('.service-card, .feature, .master-card, .price-block')
     el.style.transition = 'all 0.5s ease';
     observer.observe(el);
 });
+
+
+// ============================================
+// ВСЕ КНОПКИ ЗВОНЯТ ПО ТЕЛЕФОНУ
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все кнопки и ссылки с нужными текстами
+    const buttons = document.querySelectorAll('a, button');
+
+    const keywords = [
+        'записаться',
+        'подробнее',
+        'узнать больше',
+        'выбрать время',
+        'запись онлайн',
+        'записаться онлайн',
+        'записаться на стрижку',
+        'записаться на маникюр',
+        'записаться в солярий',
+        'записаться на диагностику',
+        'записаться на процедуру'
+    ];
+
+    buttons.forEach(btn => {
+        const text = btn.textContent.toLowerCase().trim();
+
+        // Проверяем, есть ли ключевое слово в тексте кнопки
+        const isMatch = keywords.some(keyword => text.includes(keyword));
+
+        // Проверяем, что это не уже существующая ссылка с href
+        const isNotLink = !btn.hasAttribute('href') || btn.getAttribute('href') === '#';
+
+        if (isMatch && isNotLink) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'tel:+79870305861';
+            });
+
+            // Делаем курсор как у ссылки
+            btn.style.cursor = 'pointer';
+        }
+    });
+});
